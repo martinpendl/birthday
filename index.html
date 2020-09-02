@@ -5,19 +5,18 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   
-  <body>
-      <a-scene>
-          <a-marker-camera type="pattern" patternurl="pattern-vera.patt"></a-marker-camera>
-          
-        <a-assets>
-            <a-asset-item id="happyBirthday-obj" src="happyBirthday.obj"></a-asset-item>
-            <a-asset-item id="happyBirthday-mtl" src="happyBirthday.mtl"></a-asset-item>
-        </a-assets>
-
-        <a-entity obj-model="obj: #happyBirthday-obj; mtl: #happyBirthday-mtl"></a-entity>
-          <a-entity obj-model="#happyBirthday" scale="0.01 0.01 0.01"></a-entity>
-          
-      </a-scene>
+  <body style="margin : 0px; overflow: hidden;">
+   
+     <a-scene embedded arjs>
+      <a-marker-camera type="pattern" patternurl="pattern-vera.patt">
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="happyBirthday.gltf"
+        ></a-entity>
+      </a-marker-camera>
+      <a-entity camera></a-entity>
+    </a-scene>
       
   </body>
 </html>
