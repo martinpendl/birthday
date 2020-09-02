@@ -9,11 +9,13 @@
    
      <a-scene embedded arjs>
       <a-marker-camera type="pattern" patternurl="pattern-vera.patt">
+        <a-assets>
+          <a-asset-item id="happyBirthday" src="happyBirthday.gltf"></a-asset-item>
+        </a-assets>  
         <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
-          gltf-model="happyBirthday.gltf"
-        ></a-entity>
+          gltf-model="#happyBirthday"></a-entity>
       </a-marker-camera>
       <a-entity camera></a-entity>
     </a-scene>
