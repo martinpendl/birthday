@@ -7,9 +7,13 @@
   
   <body>
    
-    <a-scene embedded arjs>
+      <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-obj-model src="happyBirthday.obj" mtl="happyBirthday.mtl"></a-obj-model>
+        <a-entity
+          position="0 0 0"
+          scale="1 1 1"
+          gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/martinpendl/birthday/gh-pages/happyBirthday.gltf"
+        ></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
