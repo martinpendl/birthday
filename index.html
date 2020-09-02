@@ -9,13 +9,7 @@
    
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-assets>
-          <a-asset-item id="happy-obj" src="happyBirthday.obj"></a-asset-item>
-          <a-asset-item id="happy-mtl" src="happyBirthday.mtl"></a-asset-item>
-        </a-assets>
-        
-        <a-obj-model src="#happy-obj" mtl="#happy-mtl"></a-obj-model>
-        
+        <a-obj-model src="happyBirthday.obj" mtl="happyBirthday.mtl"></a-obj-model>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
